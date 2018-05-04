@@ -34,6 +34,8 @@
 {
     CDVPluginResult* pluginResult = nil;
     retValue = NO;
+    
+    /*
     [INPreferences requestSiriAuthorization:^(INSiriAuthorizationStatus status){
         switch (status) {
             case INSiriAuthorizationStatusAuthorized:
@@ -43,7 +45,7 @@
                 retValue = NO;
                 break;
         }
-    }];
+    }];*/
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:retValue];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
