@@ -36,14 +36,14 @@
     retValue = YES;
     
     [INPreferences requestSiriAuthorization:^(INSiriAuthorizationStatus status){
-        /*switch (status) {
+        switch (status) {
             case INSiriAuthorizationStatusAuthorized:
                 retValue = YES;
                 break;
             default:
                 retValue = NO;
                 break;
-        }*/
+        }
     }];
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:retValue];
